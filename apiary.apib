@@ -8,85 +8,78 @@ Companies related resources of the **Huddle API**.
 
 ## Companies Collection [/people/companies]
 ### List all companies [GET]
-+ Response 200 (application/json)
-
-    + Header
-        Content-Type: application/json
++ Response 200 (application/vnd.huddle.data+json)
 
     + Body
 
-        {
-            "links": [
-                {
-                    "rel": "self",
-                    "href": "https://my.huddle.local/apigateway/people/companies"
-                }
-            ],
-            "companies": [
-                {
-                    "links": [
-                        {
-                            "rel": "self",
-                            "href": "https://my.huddle.local/apigateway/people/company/1"
-                        },
-                        {
-                            "rel": "members",
-                            "href": "https://my.huddle.local/apigateway/people/companies/1/members"
-                        },
-                        {
-                            "rel": "workspaces",
-                            "href": "https://my.huddle.local/apigateway/people/companies/1/workspaces"
-                        },
-                        {
-                            "rel": "managers",
-                            "href": "https://my.huddle.local/apigateway/people/companies/1/managers"
-                        },
-                        {
-                            "rel": "bulk-delete",
-                            "href": "https://my.huddle.local/apigateway/people/companies/1/bulkdelete"
-                        }
-                    ],
-                    "name": "Huddle"
-                }
-            ]
-        }
+            {
+                "links": [
+                    {
+                        "rel": "self",
+                        "href": "https://api.huddle.net/people/companies"
+                    }
+                ],
+                "companies": [
+                    {
+                        "links": [
+                            {
+                                "rel": "self",
+                                "href": "https://api.huddle.net/people/company/123"
+                            },
+                            {
+                                "rel": "members",
+                                "href": "https://api.huddle.net/people/companies/123/members"
+                            },
+                            {
+                                "rel": "workspaces",
+                                "href": "https://api.huddle.net/people/companies/123/workspaces"
+                            },
+                            {
+                                "rel": "managers",
+                                "href": "https://api.huddle.net/people/companies/123/managers"
+                            },
+                            {
+                                "rel": "bulk-delete",
+                                "href": "https://api.huddle.net/people/companies/123/bulkdelete"
+                            }
+                        ],
+                        "name": "Huddle"
+                    }
+                ]
+            }
 
 ## Company [/people/companies/{id}]
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Company resource to perform action with.
+    + id (required, number, `123`) ... Numeric `id` of the Company resource to perform action with.
 
 ### Retrieve a Company [GET]
-+ Response 200 (application/json)
-
-    + Header
-
-        Content-Type: application/json
++ Response 200 (application/vnd.huddle.data+json)
 
     + Body
 
-        {
-            "links": [
-                {
-                    "rel": "self",
-                    "href": "https://my.huddle.local/apigateway/people/company/1"
-                },
-                {
-                    "rel": "members",
-                    "href": "https://my.huddle.local/apigateway/people/companies/1/members"
-                },
-                {
-                    "rel": "workspaces",
-                    "href": "https://my.huddle.local/apigateway/people/companies/1/workspaces"
-                },
-                {
-                    "rel": "managers",
-                    "href": "https://my.huddle.local/apigateway/people/companies/1/managers"
-                },
-                {
-                    "rel": "bulk-delete",
-                    "href": "https://my.huddle.local/apigateway/people/companies/1/bulkdelete"
-                }
-          ],
-          "name": "Huddle"
-        }
+            {
+                "links": [
+                    {
+                        "rel": "self",
+                        "href": "https://api.huddle.net/people/company/123"
+                    },
+                    {
+                        "rel": "members",
+                        "href": "https://api.huddle.net/people/companies/123/members"
+                    },
+                    {
+                        "rel": "workspaces",
+                        "href": "https://api.huddle.net/people/companies/123/workspaces"
+                    },
+                    {
+                        "rel": "managers",
+                        "href": "https://api.huddle.net/people/companies/123/managers"
+                    },
+                    {
+                        "rel": "bulk-delete",
+                        "href": "https://api.huddle.net/people/companies/123/bulkdelete"
+                    }
+              ],
+              "name": "Huddle"
+            }
